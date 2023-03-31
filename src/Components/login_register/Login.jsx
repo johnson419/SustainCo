@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './login_register.css'
 import {auth} from '../../firebase';
+import Navbar from '../Navbar/Navbar'
 import {signInWithEmailAndPassword} from "firebase/auth";
 import Snackbar from "../Snackbar/Snackbar";
 
@@ -23,6 +24,8 @@ export const Login = () => {
 
 
     return (
+  <>
+  <Navbar/>
         <div className="apple">
         <div className="auth-form-container">
             <h2>Login</h2>
@@ -37,6 +40,7 @@ export const Login = () => {
             <a href="/register">Don't have an account? Register here.</a>
         </div>
         </div>
+        </>
     )
 }
 
